@@ -12,6 +12,10 @@
     "url": "https://github.com/makotokw/redmine-theme-gitmike/issues"
   },
   "homepage": "https://github.com/makotokw/redmine-theme-gitmike",
+  "scripts": {
+    "dev": "gulp debug",
+    "build": "gulp"
+  },
   "devDependencies": {
     "browser-sync": "^2.8.0",
     "github-markdown-css": "^2.3.0",

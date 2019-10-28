@@ -503,3 +503,13 @@ body {
 @import 'store';
 @import 'responsive';
 
+
+#content .jstTabs.tabs {
+    padding-top: 10px;
+}
+
+.jstEditor {
+    textarea {
+        padding: 15px;
+    }
+}
