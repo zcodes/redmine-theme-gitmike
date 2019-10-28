@@ -82,6 +82,8 @@ a:link, a:visited { color: #4183C4; }
 
 div.issue { background: #FFD; padding: 20px; margin-bottom: 6px; border: 1px solid #ddd; margin: -11px -11px 15px -11px; }
 div.issue.tooltip { padding: 6px; margin: 0 0 6px 0; }
+div.issue .status .value { color: #cb2431; }
+div.issue.closed .status .value { color: #28a745; }
 div.contact.details, div.deal.details { padding: 15px !important; margin: -11px -11px 6px; }
 
 #sidebar h3 { color: #222; }
@@ -121,6 +123,9 @@ table.list td { padding: 4px; }
 table.list input[type="checkbox"] { margin-top: 6px; }
 table.list tbody tr:hover { background-color: #EFF5F8; }
 table.list tbody tr.group span.count { display: inline-block; padding: 2px 5px; font: 12px Helvetica, arial, freesans, clean, sans-serif; font-weight: bold; line-height: 1; color: #555; background-color: #eee; border-radius: 20px; }
+table.list tr.issue td.status { color: #cb2431; }
+table.list tr.issue.closed td.status { color: #28a745; }
+table.list tr.issue.context-menu-selection td.status { color: #f8f8f8 !important; }
 table.list tr.issue a { color: #666; }
 
 /*tr.odd {background-color: transparent;}

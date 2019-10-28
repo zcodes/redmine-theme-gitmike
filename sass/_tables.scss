@@ -61,6 +61,19 @@ table.list {
     }
   }
   tr.issue{
+    td.status {
+      color: $issue-open-color;
+    }
+    &.closed {
+      td.status {
+        color: $issue-closed-color;
+      }
+    }
+    &.context-menu-selection {
+      td.status {
+        color: #f8f8f8 !important;
+      }
+    }
     a {
       color: #666;
     }

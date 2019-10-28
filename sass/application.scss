@@ -279,6 +279,18 @@ div {
       padding: 6px;
       margin: 0 0 6px 0;
     }
+    .status {
+      .value {
+        color: $issue-open-color;
+      }
+    }
+  }
+  &.issue.closed {
+    .status {
+      .value {
+        color: $issue-closed-color;
+      }
+    }
   }
   &.contact.details, &.deal.details {
     padding: 15px !important;
