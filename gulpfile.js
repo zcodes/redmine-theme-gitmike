@@ -35,22 +35,16 @@ gulp.task('compass:dev', function () {
     return compass('development');
 });
 
-gulp.task('browser-sync', function () {
-  browserSync({
-    port: 3001,
-    open: false,
-    proxy: "127.0.0.1:3000"
-  });
+gulp.task('browser-sync', function (done) {
+    browserSync.init({
+        port: 3001,
+        proxy: '127.0.0.1:3000'
+    });
+    done();
 });
 
-gulp.task('browser-sync:reload', function () {
-  browserSync.reload();
-});
-
-gulp.task('debug', ['compass:dev', 'browser-sync'],
-  function () {
-    gulp.watch('sass/**/*.scss', ['compass:dev']);
-  }
-);
+gulp.task('debug', gulp.series('compass:dev', 'browser-sync', function () {
+    gulp.watch('sass/**/*.scss', gulp.task('compass:dev'));
+}));
 
 gulp.task('default', gulp.series('compass:prod'));
