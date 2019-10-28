@@ -3,7 +3,7 @@
  * gitmike
  * This is github-like theme for Redmine.
  * It is based on A1 theme version 1.0.3 by Kirill Bezrukov www.redminecrm.com.
- * @version 1.1.1
+ * @version 1.2.0
  * @see https://github.com/makotokw/redmine-theme-gitmike
  * @license GPL3 License
  */
@@ -213,13 +213,15 @@ option { border-bottom: 1px dotted #ddd; }
 
 img.gravatar { box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05); }
 
+#content .tabs { height: 2.8em; }
+
 .controller-wiki div#content > div.contextual { margin-top: 3px; }
 .controller-wiki div#content > div.wiki { padding: 0 8px 8px 8px; }
 
 div.wiki { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #333; font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; line-height: 1.6; word-wrap: break-word; }
 div.wiki:before { display: table; content: ""; }
 div.wiki:after { display: table; clear: both; content: ""; }
-div.wiki a { background-color: transparent; text-decoration: none; text-decoration-skip: objects; }
+div.wiki a { background-color: transparent; text-decoration: none; -webkit-text-decoration-skip: objects; text-decoration-skip: objects; }
 div.wiki a:active, div.wiki a:hover { text-decoration: underline; outline-width: 0; }
 div.wiki a:not([href]) { color: inherit; text-decoration: none; }
 div.wiki p, div.wiki blockquote, div.wiki ul, div.wiki ol, div.wiki dl, div.wiki table, div.wiki pre { margin-top: 0; margin-bottom: 16px; }
@@ -240,15 +242,18 @@ div.wiki ul.toc { padding: 10px; }
 div.wiki img { border-style: none; max-width: 100%; }
 div.wiki table { border-spacing: 0; border-collapse: collapse; overflow: auto; word-break: normal; word-break: keep-all; }
 div.wiki table th { font-weight: bold; }
-div.wiki table th, div.wiki table td { padding: 6px 13px; border: 1px solid #ddd; }
+div.wiki table th, div.wiki table td { border: 1px solid #ddd; padding: 6px 13px; }
 div.wiki table tr { background-color: #fff; border-top: 1px solid #ccc; }
 div.wiki table tr:nth-child(2n) { background-color: #f8f8f8; }
-div.wiki table img { max-width: 100%; box-sizing: content-box; background-color: #fff; }
+div.wiki table img { background-color: #fff; box-sizing: content-box; max-width: 100%; }
 div.wiki pre { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; margin: 15px 0; background-color: #f8f8f8; border: 1px solid #ddd; font-size: 13px; line-height: 19px; overflow: auto; padding: 6px 10px; border-radius: 3px; }
 div.wiki kbd { display: inline-block; padding: 3px 5px; font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace; line-height: 10px; color: #555; vertical-align: middle; background-color: #fcfcfc; border: solid 1px #ccc; border-bottom-color: #bbb; border-radius: 3px; box-shadow: inset 0 -1px 0 #bbb; }
 div.wiki hr { box-sizing: content-box; height: 0; margin: 15px 0; background: transparent; border: 0; border-bottom: 1px solid #eee; overflow: visible; }
-div.wiki hr::before { display: table; content: ""; }
-div.wiki hr::after { display: table; clear: both; content: ""; }
+div.wiki hr::before { content: ""; display: table; }
+div.wiki hr::after { clear: both; content: ""; display: table; }
+
+.tabular .jstEditor .wiki-preview { padding: 8px; width: auto; }
+.tabular .jstEditor .wiki-preview p { padding: 0 !important; }
 
 div.wiki-preview { padding: 15px !important; }
 
