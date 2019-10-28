@@ -21,6 +21,12 @@ tt, code, pre {
   font-size: 12px;
 }
 
+p, li {
+  code {
+    color: $inline-code-color;
+  }
+}
+
 #content h1, h2, h3, h4 {
   color: $text-color;
 }

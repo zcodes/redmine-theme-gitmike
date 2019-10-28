@@ -13,6 +13,8 @@ body, input, select, textarea, button { font: 12px -apple-system, BlinkMacSystem
 
 tt, code, pre { font-family: Consolas, "Liberation Mono", Courier, monospace; font-size: 12px; }
 
+p code, li code { color: #d73a49; }
+
 #content h1, h2, h3, h4 { color: #333; }
 
 #header { background-color: #fafafa; border-bottom: 1px solid #eee; padding: 4px 8px 10px 6px; height: auto; }
