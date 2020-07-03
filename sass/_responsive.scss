@@ -4,8 +4,8 @@
 */
 
 @media all and (max-width: 899px) {
-  body {
-      font-size: 12px;
+  body, input, select, textarea, button {
+      font-size: 12px !important;
   }
   #main {
     margin: 0;
